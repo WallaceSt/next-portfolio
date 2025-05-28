@@ -10,7 +10,7 @@ const Navigation = () => {
             <li key={index}>
               <a
                 href="#"
-                className="text-md text-orange-500 md:text-white font-semibold tracking-wide cursor-pointer hover:text-teal-300 transition duration-300"
+                className="text-md text-gray-300 md:text-white font-semibold tracking-wide cursor-pointer hover:text-teal-300 transition duration-300"
               >
                 {_.text}
               </a>
