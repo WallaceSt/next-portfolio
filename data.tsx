@@ -1,6 +1,4 @@
-export interface NavigationLink {
-  text: string;
-}
+import { Link } from "@/types";
 
 export const navigation = {
   links: [
@@ -8,5 +6,5 @@ export const navigation = {
     { text: "Projetos" },
     { text: "Habilidades" },
     { text: "Contato" },
-  ],
+  ] satisfies Link[],
 };
