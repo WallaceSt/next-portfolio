@@ -1,9 +1,11 @@
-import Navigation from "@/components/Navigation"
+import Hero from "@/components/Hero";
+import FloatingNav from "@/components/FloatingNavbar"
 
 export default function Home() {
   return (
     <>
-      <Navigation />
+      <FloatingNav />
+      <Hero />
     </>
   );
 }
