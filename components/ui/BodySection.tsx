@@ -13,11 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-type BodySectionProps = {
-  children: React.ReactNode;
-}
-
-const BodySection : React.FC<BodySectionProps> = ({children}) => {
+const BodySection = ({children}:{children: React.ReactNode}) => {
   return (
     <section className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950`}>
       {children}

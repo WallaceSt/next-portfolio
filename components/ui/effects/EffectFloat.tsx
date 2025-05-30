@@ -1,5 +1,5 @@
 "use client";
-import React, { JSX, useState } from "react";
+import React, { useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -8,17 +8,15 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 
-export const FloatingNav = ({
-  navItems,
-  className,
-}: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: JSX.Element;
-  }[];
+type EffectFloatNavbarProps = {
+  children: React.ReactNode;
   className?: string;
-}) => {
+};
+
+export const EffectFloatNavbar = ({
+  children,
+  className,
+}: EffectFloatNavbarProps) => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(false);
@@ -59,18 +57,7 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <a
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </a>
-        ))}
+        {children}
       </motion.div>
     </AnimatePresence>
   );

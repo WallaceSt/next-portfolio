@@ -1,10 +1,11 @@
-import Hero from "@/components/Hero";
-import FloatingNav from "@/components/FloatingNavbar"
+import Hero from "@/components/ui/areas/Hero";
+import Navbar from "@/components/ui/areas/Navbar";
+import { nav_links } from "@/data";
 
 export default function Home() {
   return (
     <>
-      <FloatingNav />
+      <Navbar navItems={nav_links} />
       <Hero />
     </>
   );
