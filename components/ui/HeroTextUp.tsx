@@ -8,7 +8,7 @@ type HeroTextUpProps = {
 
 const HeroTextUp: React.FC<HeroTextUpProps> = ({children}) => {
   return (
-    <motion.p
+    <motion.div
       initial={{
         y: 20,
         opacity: 0,
@@ -21,7 +21,7 @@ const HeroTextUp: React.FC<HeroTextUpProps> = ({children}) => {
         delay: 1.2,
       }}
       className="text-neutral-400 max-w-lg mx-auto my-2 text-sm text-center relative z-10"
-    >{children}</motion.p>
+    >{children}</motion.div>
   );
 };
 

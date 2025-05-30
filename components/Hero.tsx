@@ -1,8 +1,10 @@
+"Use client"
 import React from "react";
 import { BackgroundBeams } from "./ui/BackgroundBeans";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import HeroTextDown from "./ui/HeroTextDown";
 import HeroTextUp from "./ui/HeroTextUp";
+import HeroCallToAction from "./ui/HeroCallToAction";
 
 const Hero = () => {
   return (
@@ -16,7 +18,7 @@ const Hero = () => {
         </h1>
         {/* Presentation text section */}
         <HeroTextUp>
-          <span>
+          <p>
             Experienced in{' '}
             <span className="font-medium text-neutral-300">
               React, Node.js, Python, PostgreSQL, Docker, AWS, Jenkins
@@ -27,9 +29,11 @@ const Hero = () => {
             </span>
             , I build scalable, efficient digital solutions that drive impact.
             🚀 Let&apos;s create something outstanding—get in touch today!
-          </span>
+          </p>
         </HeroTextUp>
       </div>
+        {/* Call to action section */}
+        <HeroCallToAction text="Get in Touch" />
       {/* Background section */}
       <BackgroundBeams />
     </div>
